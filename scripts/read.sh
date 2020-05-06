@@ -1,3 +1,4 @@
 #!/bin/bash
 
-read -n 1 -p "Do you want to update the tv feed? [y/n/q]" 
+read -n 1 -p "Make a choice: " input
+echo "input: " $input
