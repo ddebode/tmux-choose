@@ -9,7 +9,7 @@ Press ( <kbd>prefix</kbd> + <kbd>t</kbd> ) to show the choose menu.
 
 # Configuration
 
-- @choose-options: Configure which commands should be shown in choose menu.
+- @choose-options: Configure which commands should be shown in the choose menu.
 
 ```
 set -g @choose-options ("htop","vifm .","lazygit","vi ~/.vimrc","vi ~/.zshrc")
