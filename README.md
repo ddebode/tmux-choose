@@ -1,2 +1,2 @@
-# tmux-toggle
-Tmux toggle plugin
+# tmux-choose
+Tmux choose plugin
