@@ -1,7 +1,7 @@
 #!/bin/bash
 
 options=$(tmux show-option -gqv @choose-options)
-if [ -z $options ] 
+if [[ -z $options ]]
 then
     arr=("top" "vi ~/.bashrc" "git log -p")
 else
