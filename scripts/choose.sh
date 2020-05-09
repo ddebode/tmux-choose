@@ -1,26 +1,18 @@
 #!/bin/bash
-# Bash Menu Script Example
 
-PS3='Run command: '
-options=("htop" "vifm" "lazygit" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "htop")
-	    htop
-            ;;
-        "vifm")
-            vifm .
-            ;;
-        "lazygit")
-            lazygit  
-	    ;;
-        # "cheatsheet vifm")
-        #     w3m https://vifm.info/cheatsheets/v0.10.1/vifm-v0.10.1-builtin-normal.png  
-	    # ;;
-        "Quit")
-            break
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
+options=$(tmux show-option -gqv @choose-options)
+if [ -z $options ] 
+then
+    arr=("top" "vi ~/.bashrc" "git log -p")
+else
+    IFS=',' read -r -a arr <<< $options
+fi  
+
+for ((i = 0; i < ${#arr[@]}; ++i)); do
+    position=$(( $i + 1 ))
+    echo "[$position]: ${arr[$i]}"
 done
+
+read -n 1 -p "Make a choice: " input
+
+${arr[$(($input-1))]}
