@@ -12,7 +12,7 @@ Press ( <kbd>prefix</kbd> + <kbd>t</kbd> ) to show the choose menu.
 - @choose-options: Configure which commands should be shown in the choose menu separated by comma.
 
 ```
-set -g @choose-options "htop,vifm .,lazygit"
+set -g @choose-options "htop,vifm .,lazygit,vi $HOME/.bshrc"
 
 ```
 - @choose-key: Configure which key to trigger the choose menu.
