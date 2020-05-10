@@ -27,6 +27,6 @@ done
 
 
 # Get input and execute choice
-# TODO more -n options should depend on lenght of options
-read -n 1 -p "Make a choice: " input
+len=$((${#arr[@]} / 10 + 1))
+read -n $len -p "Make a choice: " input
 ${arr[$(($input-1))]}
