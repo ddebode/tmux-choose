@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get options 
 options=$(tmux show-option -gqv @choose-options)
@@ -8,7 +8,6 @@ then
 else
     IFS=',' read -r -a arr <<< $options
 fi  
-
 
 # Output options
 echo " _______  __   __  __   __  __   __         _______  __   __  _______  _______  _______  _______ "
@@ -20,11 +19,10 @@ echo "  |   |  | ||_|| ||       ||   _   |       |     |_ |   _   ||       ||   
 echo "  |___|  |_|   |_||_______||__| |__|       |_______||__| |__||_______||_______||_______||_______|"
 echo ""
 
-for ((i = 0; i < ${#arr[@]}; ++i)); do
+for i in "${!arr[@]}"; do
     position=$(( $i + 1 ))
     echo "[$position]: ${arr[$i]}"
 done
-
 
 # Get input and execute choice
 len=$((${#arr[@]} / 10 + 1))
