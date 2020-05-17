@@ -5,6 +5,8 @@ Inspired by tmux-sidebar but I wanted to easily switch to multiple different com
 
 # Usage
 
+![](demo-tmux-choose.gif)
+
 Press ( <kbd>prefix</kbd> + <kbd>t</kbd> ) to show the choose menu. 
 
 # Configuration
