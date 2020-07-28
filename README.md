@@ -11,7 +11,7 @@ Press ( <kbd>prefix</kbd> + <kbd>t</kbd> ) to show the choose menu.
 
 # Configuration
 
-- @choose-options: Configure which commands should be shown in the choose menu separated by comma.
+- @choose-options: Configure which commands should be shown in the choose menu. Items should be separated by comma.
 
 ```
 set -g @choose-options "htop,vifm .,lazygit,vi $HOME/.bashrc"
